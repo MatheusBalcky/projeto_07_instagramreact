@@ -1,0 +1,374 @@
+@charset "UTF -8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+	box-sizing: border-box;
+	font-family: var(--main-font);
+}
+:root{
+	--main-font: 'Roboto', sans-serif;
+	--border-insta: 1px solid #dbdbdb;
+	--fundo-insta: #FAFAFA
+}
+body{
+	background-color: var(--fundo-insta);
+	font-family: var(--main-font);
+}
+div{
+	background-color: white;
+}
+
+/* config do topo do site */
+header{
+	position: fixed;
+	width: 100%;
+	height: 54px;
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid #dbdbdb;
+	background-color: white;
+	z-index: 1;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 20px;
+	width: 100%;
+	max-width: 1075px;
+}
+.logo-insta{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0px 10px;
+	
+}
+.logo-insta img:first-child{
+	width: 19.25px;
+	height: 20.25px;
+}
+.line{
+	height: 22px;
+	width: 1px;
+	background-color: #DBDBDB;
+}
+.logo-insta img:last-child{
+	width: 103px;
+}
+nav input{
+	width: 215px;
+	height: 28px;
+	text-align: center;
+	background-color: var(--fundo-insta);
+	border: var(--border-insta);
+	border-radius: 3px;
+}
+.right-icons{
+	display: flex;
+	width: 193px;
+	justify-content: space-around;
+}
+.right-icons img{
+	width: 22px;
+}
+.header-mobile{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	display: none;
+	padding: 0px 15px;
+}
+.header-mobile img:first-child{
+	width: 19.25px;
+	cursor: pointer;
+}
+.header-mobile img:nth-child(2){
+	width: 103px;
+	cursor: pointer;
+}
+.header-mobile img:last-child{
+	width: 17.87px;
+}
+
+
+/* layouts */
+main{
+	display: flex;
+	justify-content: center;
+}
+main > section{
+	margin-top: 90px;
+	display: flex;
+	justify-content: space-between;
+	width: 1021px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 54px;
+}
+.feed{
+	display: flex;
+	flex-direction: column;
+	max-width: 615px;
+	background-color: var(--fundo-insta);
+}
+.stories{
+	padding: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	max-width: 615px;
+	height: 118px;
+	margin-bottom: 25px;
+	border: var(--border-insta);
+	border-radius: 3px;
+	gap: 0px 12px;
+	position: relative;
+}
+.posts{
+	background-color: var(--fundo-insta);
+}
+.posts > div{
+	border: var(--border-insta);
+	border-radius: 3px;
+	max-width: 615px;
+	margin-bottom: 24px;
+}
+.aside{
+	margin-top: 23px;
+	width: 375px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px 0px;
+	background-color: var(--fundo-insta);
+}
+.aside div{
+	background-color: var(--fundo-insta);
+}
+
+
+
+/*config stories */
+.stories > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 7px 0px;
+}
+.stories > div h6{
+	font-size: 12px;
+	cursor: pointer;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 66px;
+	text-align: center;
+	padding: 2px 0;
+}
+.background-img{
+	width: 66px;
+	height: 66px;
+	background-image: url("../components/images/stories-background.png");
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.background-img > img{
+	width: 90%;
+}
+.stories > img{
+	position: absolute;
+	top: 40%;
+	right: 10px;
+	border-radius: 15px;
+	box-shadow: 2px 0px 5px 2px rgba(0, 0, 0, 0.411);
+	background-color: rgba(0, 0, 0, 0.411);
+	cursor: pointer;
+}
+
+
+/* config post */
+.head-post{
+	padding: 0px 15px;
+	width: 100%;
+	height: 61px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #dbdbdb;
+}
+.head-post div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.head-post div img{
+	width: 32px;
+}
+.head-post img{
+	width: 20px;
+	cursor: pointer;
+}
+.posts > div > img{
+	width: 100%;
+}
+.footer-post{
+	display: flex;
+	flex-direction: column;
+	padding: 10px 17px 20px 17px;
+	gap: 15px 0px;
+	justify-content: center;
+	border-bottom: var(--border-insta);
+}
+.icons-post{
+	display: flex;
+	justify-content: space-between;
+}
+.icons-post div{
+	width: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.icons-post img{
+	cursor: pointer;
+}
+.information-post{
+	display: flex;
+	font-size: 14px;
+	gap: 0px 5px;
+	align-items: center;
+	cursor: pointer;
+	width: 100%;
+}
+.comment-bar{
+	padding: 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.comment-bar img{
+	cursor: pointer;
+}
+.comment-bar > div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.comment-bar input{
+	padding: 5px;
+	border: none;
+}
+.comment-bar button{
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+}
+.comments{
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em 0;
+}
+.comments div{
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+}
+
+
+/* config aside */
+.aside > div:first-child{
+	display: flex;
+	font-size: 14px;
+	line-height: 1.3em;
+	font-weight: 500;
+	align-items: center;
+	gap: 0px 17px;
+}
+.aside > div:first-child h6{
+	color: #adadad;
+	font-weight:300;
+}
+.aside > div:nth-child(2){
+	display: flex;
+	flex-direction: column;
+	
+}
+.suggestion{
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+.suggestion h6{
+	color: #8E8E8E;
+}
+.canva-persons{
+	display: flex;
+	flex-direction: column;
+	gap: 14px 0px;
+}
+.person-suggested{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.person-suggested > div{
+	display: flex;
+	gap: 0px 11px;
+}
+.person-suggested img{
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+.name-person{
+	line-height: 1.1em;
+}
+.name-person h5{
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+}
+.name-person h6{
+	font-size: 12px;
+	font-weight: 400;
+	color: #8E8E8E;
+}
+.person-suggested > h6{
+	font-size: 12px;
+	color: #139EF2;
+	font-weight: 600;
+	cursor: pointer;
+}
+.aside > div:last-child {
+	font-size: 12px;
+	font-weight: 400;
+	color: #c7c7c7;
+	line-height: 14px;
+	width: 330px;
+}
+
+.nav-mobile{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 22px;
+	width: 100%;
+	position: fixed;
+	bottom: -1px;
+	height: 54px;
+	display: none;
+	border-top: var(--border-insta);
+}
+.nav-mobile img{
+	cursor: pointer;
+}

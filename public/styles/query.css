@@ -1,0 +1,42 @@
+@charset "UTF -8";
+
+@media (max-width: 1076px){
+    .aside{
+        display: none;
+    }
+    main > section{
+        display: flex;
+        justify-content: center;
+        max-width: 1021px;
+    }
+}
+
+@media (max-width: 633px){
+    header > nav{
+        display: none;
+    }
+    .header-mobile{
+        display: flex;
+    }
+    main > section{
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 54px;
+    }
+    .stories{
+        width: 100vw;
+        overflow: hidden;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+    }
+    .stories > img{
+        display: none;
+    }
+    .stories div, .background-img{
+        background-color: transparent;
+    }
+    .nav-mobile{
+        display: flex;
+    }
+}
