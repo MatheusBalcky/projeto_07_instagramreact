@@ -1,12 +1,14 @@
+const itensIcons = [
+    {link: "https://www.instagram.com/direct/inbox/", imgSrc:"./images/icon-direct.svg"},
+    {link: "https://www.instagram.com/direct/inbox/", imgSrc:"./images/icon-explore.svg"},
+    {link: "https://www.instagram.com/direct/inbox/", imgSrc:"./images/icon-heart.svg"},
+    {link: "https://www.instagram.com/direct/inbox/", imgSrc:"./images/icon-person.svg"},
+]
 function RightIcons (props){
     return (
         <a href={props.link}><img src={props.imgSrc}/></a>
-        <a href={props.link}><img src={props.imgSrc}/></a>
-        <a href={props.link}><img src={props.imgSrc}/></a>
-        <a href={props.link}><img src={props.imgSrc}/></a>   
     )
 }
-
 export default function Header (){
     return (
     <header>
@@ -22,12 +24,7 @@ export default function Header (){
             <input type="text" placeholder="Pesquisar"/>
 
             <div class="right-icons">
-                <RightIcons link="https://www.instagram.com/direct/inbox/" imgSrc="./images/icon-direct.svg"/>
-                <RightIcons link="https://www.instagram.com/direct/inbox/" imgSrc="./images/icon-explore.svg"/>
-                <RightIcons link="https://www.instagram.com/direct/inbox/" imgSrc="notifications-icon"/>
-                <RightIcons link="https://www.instagram.com/direct/inbox/" imgSrc="./images/icon-direct.svg"/>
-                <a href="https://www.instagram.com/"><img src="./images/icon-heart.svg" alt="notifications-icon"/></a>
-                <a href="https://www.instagram.com/instagram"><img src="./images/icon-person.svg" alt="icon-person"/></a>
+                {itensIcons.map( item =>  <RightIcons link={item.link} imgSrc={item.imgSrc}/>)}
             </div>
         </nav>
 

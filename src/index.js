@@ -1,10 +1,14 @@
 import ReactDOM from "react-dom";
 import Header from "./components/Header";
+import Main from "./components/Main";
 
 
 function App (){
     return (
-        <Header />
+        <div>
+            <Header />
+            <Main />
+        </div>
     )
 }
 
