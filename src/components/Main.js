@@ -1,5 +1,6 @@
 import Stories from "./Stories";
 import Posts from "./Posts";
+import Aside from "./Aside";
 
 export default function Main (){
     return(
@@ -8,6 +9,7 @@ export default function Main (){
                 <div class="feed">
                     <Stories />
                     <Posts />
+                    <Aside />
                 </div>
             </section>
         </main>
