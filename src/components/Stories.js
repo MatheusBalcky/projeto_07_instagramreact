@@ -1,4 +1,4 @@
-const storiees = [
+const stories = [
     {img: "./images/storie01.png", alt:"perfil-photo", name:'9gag'},
     {img: "./images/storie02.png", alt:"perfil-photo", name:'meowed'},
     {img: "./images/storie03.png", alt:"perfil-photo", name:'barked'},
@@ -21,6 +21,9 @@ function Storie(props){
 
 export default function Stories (){
     return (
-        { storiees.map( item => <Storie img={item.img} alt={item.alt} name={item.name} />) }
+        <div class='stories'>
+            { stories.map( item => <Storie img={item.img} alt={item.alt} name={item.name} />) }
+            <img src="./images/icon-arrow.svg" alt="arrow-ico"></img>
+        </div>
     )
 }
