@@ -7,11 +7,14 @@
 :root{
 	--main-font: 'Roboto', sans-serif;
 	--border-insta: 1px solid #dbdbdb;
-	--fundo-insta: #FAFAFA
+	--fundo-insta: #FAFAFA;
 }
 body{
 	background-color: var(--fundo-insta);
 	font-family: var(--main-font);
+}
+.root > div{
+	background-color: var(--fundo-insta);
 }
 div{
 	background-color: white;

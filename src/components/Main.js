@@ -9,8 +9,8 @@ export default function Main (){
                 <div class="feed">
                     <Stories />
                     <Posts />
-                    <Aside />
                 </div>
+                <Aside />
             </section>
         </main>
     )

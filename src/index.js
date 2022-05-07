@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import NavMobile from "./components/NavMobile";
 
 
 function App (){
@@ -8,6 +9,7 @@ function App (){
         <div>
             <Header />
             <Main />
+            <NavMobile />
         </div>
     )
 }
