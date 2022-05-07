@@ -1,3 +1,4 @@
+const userPerfil = {imgSrc: "./images/photo-perfil-insta.png", userName:'catanacomics', name:'Catana'}
 const personsSuggested = [
     { imgSrc: "./images/badvibes-photo.png", personName: "bad.vibes.memes"},
     { imgSrc: "./images/birdperfil-photo.png", personName: "chibirdart"},
@@ -5,6 +6,18 @@ const personsSuggested = [
     { imgSrc: "./images/adorable-animals.png", personName: "adorable_animals"},
     { imgSrc: "./images/smallcutecats-photo.png", personName: "smallcutecats"}
 ]
+
+function UserPerfil (props){
+    return (
+        <div>
+            <img width= '42px' height= '42px' src={userPerfil.imgSrc}/>
+            <div>
+                <h5>{userPerfil.userName}</h5>
+                <h6>{userPerfil.name}</h6>
+            </div>
+        </div>
+    )
+}
 
 function PersonsSuggested (props){
     return (
@@ -24,33 +37,28 @@ function PersonsSuggested (props){
 export default function Aside (){
     return (
         <div class='aside'>
-                <div>
-                    <img src="./images/photo-perfil-insta.png" alt="perfil-photo"/>
-                    <div>
-                        <h5>catanacomics</h5>
-                        <h6>Catana</h6>
-                    </div>
+
+            <UserPerfil />
+
+            <div>
+                <div class="suggestion">
+                    <h6>Sugestões para você</h6>
+                    <a href="#"><strong>Ver tudo</strong></a>
                 </div>
 
-                <div>
-                    <div class="suggestion">
-                        <h6>Sugestões para você</h6>
-                        <a href="#"><strong>Ver tudo</strong></a>
-                    </div>
-
-                    <div class="canva-persons">
-                        {personsSuggested.map( item => <PersonsSuggested imgSrc={item.imgSrc} personName={item.personName}/>)}
-                    </div>
-
+                <div class="canva-persons">
+                    {personsSuggested.map( item => <PersonsSuggested imgSrc={item.imgSrc} personName={item.personName}/>)}
                 </div>
 
-                <div>
-                    Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
-                    Termos • Localizações • Contas mais relevantes • Hashtags • 
-                    Idioma <br/> <br/> <br/>
+            </div>
 
-                    © 2021 INSTAGRAM DO FACEBOOK
-                </div>
+            <div>
+                Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
+                Termos • Localizações • Contas mais relevantes • Hashtags • 
+                Idioma <br/> <br/> <br/>
+
+                © 2021 INSTAGRAM DO FACEBOOK
+            </div>
         </div>
     )
 }
