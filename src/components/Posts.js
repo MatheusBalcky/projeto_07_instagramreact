@@ -1,3 +1,5 @@
+import React from 'react';
+
 const objetoPost = [
     { imgPerfil:"./images/storie02.png",
     namePerf:"meowed",
@@ -72,6 +74,13 @@ function Comment(props){
     
 }
 function Post (props){
+
+    const [heart, setImg] = React.useState('heart-outline');
+
+    function clickLike (){
+        heart === 'heart-outline' ? setImg('heart'):setImg('heart-outline')
+    }
+
     return (
         <div>
             <div class="head-post">
@@ -82,12 +91,14 @@ function Post (props){
                 <img src="./images/points-menu-head-post.svg" alt="points-menu-post"/>
             </div>
 
+            <span onDoubleClick={clickLike}>
             { IsVideoOrImg(props.contentPostImg.length, props)}
-
+            </span>
+    
             <div class="footer-post">
                 <div class="icons-post">
                     <div>
-                        <img src="./images/icon-heart.svg" alt="like-icon"/>
+                        <ion-icon onClick={clickLike} name={heart}></ion-icon>
                         <img src="./images/coment-icon.svg" alt="coment-icon"/>
                         <img src="./images/icon-direct.svg" alt="direct-icon"/>
                     </div>
@@ -115,7 +126,6 @@ function Post (props){
         </div>
     )
 }
-
 
 
 export default function Posts (){

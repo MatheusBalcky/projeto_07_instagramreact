@@ -6,8 +6,8 @@ const stories = [
     {img: "./images/storie05.png", alt:"perfil-photo", name:'wawawiwacomics'},
     {img: "./images/storie06.png", alt:"perfil-photo", name:'respondeai'},
     {img: "./images/storie07.png", alt:"perfil-photo", name:'filomodernag'},
-    {img: "./images/storie08.png", alt:"perfil-photo", name:'memeriago'}
-]
+    {img: "./images/storie08.png", alt:"perfil-photo", name:'memeriago'}]
+    
 function Storie(props){
     return(
         <div>
@@ -18,7 +18,6 @@ function Storie(props){
         </div>
     )
 }
-
 export default function Stories (){
     return (
         <div class='stories'>
