@@ -59,7 +59,7 @@ function IsVideoOrImg(valor, props){
 }
 function Comment(props){
     let arrayComments = [];
-    let namesComment = objetoPost[props.index].nameComment
+    let namesComment = objetoPost[props.index].nameComment;
     let comments = objetoPost[props.index].comments;
     for (let i = 0; i < namesComment.length; i++){
         arrayComments.push(
@@ -74,11 +74,10 @@ function Comment(props){
     
 }
 function Post (props){
-
     const [heart, setImg] = React.useState('heart-outline');
 
     function clickLike (){
-        heart === 'heart-outline' ? setImg('heart'):setImg('heart-outline')
+        heart === 'heart-outline' ? setImg('heart') : setImg('heart-outline');
     }
 
     return (
@@ -91,7 +90,7 @@ function Post (props){
                 <img src="./images/points-menu-head-post.svg" alt="points-menu-post"/>
             </div>
 
-            <span onDoubleClick={clickLike}>
+            <span class='canva-postimg' onDoubleClick={clickLike}>
             { IsVideoOrImg(props.contentPostImg.length, props)}
             </span>
     

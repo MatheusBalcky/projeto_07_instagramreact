@@ -221,6 +221,9 @@ main > section{
 .posts > div > img{
 	width: 100%;
 }
+.canva-postimg{
+	cursor: pointer;
+}
 .footer-post{
 	display: flex;
 	flex-direction: column;
@@ -240,6 +243,7 @@ main > section{
 	align-items: center;
 }
 ion-icon{
+	cursor: pointer;
 	font-size: 24px;
 }
 .icons-post img{
