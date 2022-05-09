@@ -1,5 +1,4 @@
 import React from "react";
-import objetoPost from "./ApiPost";
 import CommentBar from './CommentBar'
 
 
