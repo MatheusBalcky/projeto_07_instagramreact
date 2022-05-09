@@ -246,6 +246,9 @@ ion-icon{
 	cursor: pointer;
 	font-size: 24px;
 }
+.heart-comment{
+	font-size: 15px;
+}
 .icons-post img{
 	cursor: pointer;
 }
